@@ -1,1 +1,21 @@
 <h1> My Portfolio </h1>
+
+<h3>Search for Stocks </h3>
+
+<div id = "stock-lookup">
+  <%= form_tag "#", method: :get, id: "stock-lookup-form" do %>
+    <div class = "row">
+      <div class = "form-group no-padding text-center col-md-12" >
+        <div clas = "col-md-10">
+            <%= text_field_tag :stock, params[:stock], placeholder: "Stocke ticker symbol", autofocus: true,
+                            class: "form-control search-box input-lg" %>
+        </div>
+        <div clas = "col-md-2">
+          <%= button_tag(type: :submit, class: "btn btn-lg btn-success") do %>
+          Look up a stock
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
